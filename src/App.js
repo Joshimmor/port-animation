@@ -4,8 +4,7 @@ import Nav from "./Nav.js";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -14,7 +13,12 @@ function App() {
       <div className="App">
         <Nav/>
       <Switch>  
-        <Route path="">
+      <Route path="/projects">
+             <div>
+               hello
+             </div>
+        </Route>
+        <Route path="/">
              <Home/>
         </Route>
       </Switch>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
+import {Link} from "react-router-dom";
+
 import './Nav.scss';
 
 
@@ -19,14 +20,26 @@ export default class Nav extends Component {
         console.log(this.state.open)
         return (
             <div className={this.state.open? "nav":"nav-div"}>
-
-                <div className="menu_bars" onClick={this.toggleNav}>
+                <div className={this.state.open? "menu_bars":"close"} onClick={this.toggleNav} >
                     <span className="bar1"/>
                     <span className="bar2"/>
                     <span className="bar3"/>
                 </div>
-           
-        </div>
+                <div className={this.state.open? "invis":"vis"}>
+                    <ul>
+                        <li>
+                            <Link to="/projects" onClick={this.toggleNav} className="nav-links">Projects</Link>
+                        </li>
+                        <li>
+                            <a target="_blank" onClick={this.toggleNav} href="https://github.com/Joshimmor"className="nav-links">Github</a>
+                        </li>
+                        <li>
+                            <Link to="/" onClick={this.toggleNav} className="nav-links">Home</Link>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
         )
     }
 }
