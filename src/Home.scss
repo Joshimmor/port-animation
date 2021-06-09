@@ -1,0 +1,100 @@
+.Home-wrapper{
+    display:flex;
+    flex-direction: column;
+}
+.Landing-div{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: flex-end;
+    h1{
+        margin: 0 10px 0 0;
+        padding:0;
+        font-size: 4em;
+    }
+    .button {
+            backface-visibility: hidden;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        display: inline-block;
+        white-space: nowrap;
+        background: linear-gradient(180deg,#fff 39.047306893914566%,#ddd 100%);
+        border-radius: 100px;
+        border: 0px solid rgba(87.75246741752973%,69.91252145057165%,64.97806831077473%,0);
+        border-width: 0px 0px 0px 0px;
+        padding: 10px 13px 10px 13px;
+        box-shadow: 0px 0px 4px rgba(0,0,0,0.5),0px 0px 1px 5px rgba(0,0,0,0.1);
+            color: #000;
+        font-size: 16px;
+        font-family: Helvetica Neue;
+        font-weight: 900;
+        font-style: normal;
+        text-shadow: 0px 0px 30px rgba(0,0,0,0.7),0px 1px 1px rgba(0,0,0,0.4)
+      }
+      .button > div {
+            color: #999;
+        font-size: 10px;
+        font-family: Helvetica Neue;
+        font-weight: initial;
+        font-style: normal;
+        text-align: center;
+        margin: 0px 0px 0px 0px
+      }
+      .button > i {
+            color: #fff;
+        font-size: 1em;
+        border-radius: 0px;
+        border: 0px solid transparent;
+        border-width: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        position: static
+      }
+      .button > .ld {
+            font-size: initial
+      }
+}
+.Fairview-div{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    .Fairview-Textbox{
+        background-color: #000;
+        height: 30vh;
+        width: 49vw;
+        margin-left: 1vw;
+        h2,p{
+            color: white;
+        }
+    }
+    .Fairview-Catch{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.Past-div{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .Past-Catch{
+        background-color: #000;
+        height: 30vh;
+        width: 98vw;
+    }
+    .Past-text{
+        background-color: #f8f8f8f8;
+        height: 70vh;
+        width:98vw ;
+    }
+}

@@ -1,5 +1,6 @@
 import './App.scss';
 import Home from "./Home.js";
+import Nav from "./Nav.js";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +12,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Switch>
+        <Nav/>
+      <Switch>  
         <Route path="">
              <Home/>
         </Route>

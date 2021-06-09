@@ -1,24 +1,33 @@
-import React from 'react';
-import './App.scss';
-import folder from "./assests/folder.svg";
-import github from "./assests/github.svg";
-import linkedin from "./assests/linkedin.svg";
-import {Link} from "react-router-dom";
+import React, { Component } from 'react';
+import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
+import './Nav.scss';
 
-export default function Nav() {
-    return (
-        <div className="navBar-section">
-            <div className="navBar">
-                <a href="https://github.com/Joshimmor" target="_blank">
-                    <img className="nav-links" src={github} alt="github"/>
-                </a>
-                <a href="">
-                    <img className="nav-links" src={linkedin} alt="linkedin"/>
-                </a>
-                <Link to="/projects">
-                 <img className="nav-links" src={folder} alt="folder"/>
-                </Link>
-            </div>
+
+export default class Nav extends Component {
+    constructor(){
+        super();
+        this.state ={
+            open : true
+        }
+        this.toggleNav = this.toggleNav.bind(this)
+    }
+    
+    toggleNav() {
+        this.setState({open:!this.state.open})
+    }
+    render() {
+        console.log(this.state.open)
+        return (
+            <div className={this.state.open? "nav":"nav-div"}>
+
+                <div className="menu_bars" onClick={this.toggleNav}>
+                    <span className="bar1"/>
+                    <span className="bar2"/>
+                    <span className="bar3"/>
+                </div>
+           
         </div>
-    )
+        )
+    }
 }
+
