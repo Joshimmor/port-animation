@@ -31,7 +31,7 @@ export default class Nav extends Component {
                             <Link to="/projects" onClick={this.toggleNav} className="nav-links">Projects</Link>
                         </li>
                         <li>
-                            <a target="_blank" onClick={this.toggleNav} href="https://github.com/Joshimmor"className="nav-links">Github</a>
+                            <a   rel="noreferrer" target="_blank" onClick={this.toggleNav} href="https://github.com/Joshimmor"className="nav-links">Github</a>
                         </li>
                         <li>
                             <Link to="/" onClick={this.toggleNav} className="nav-links">Home</Link>

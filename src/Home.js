@@ -72,7 +72,13 @@ export default function Home() {
             <div className="Fairview-div">
                     <div className="Fairview-Textbox" ref={FairviewTextbox}>
                        <h2>Fairview Healthcare Services</h2> 
-                       <p>someother nonsense goes here</p>
+                       <p>Building Android Applications with a Restful API and MySQL backend for managerial software. Also build Firebase hosted
+                           react Applications for Covid Tracking in a Cloud Database. </p>
+                        <div className="link-row">
+                            <Link to="projects" className="links-BTN">Views</Link>
+                            <a href="https://github.com/Joshimmor/job-logger-api"
+                            target="_Blank" rel="noreferrer" className="links-BTN"> github</a>
+                        </div> 
                     </div>
                     <div className="Fairview-Catch">
                         <h2 id="tag1" ref={Tag1}>Java Developer</h2>
