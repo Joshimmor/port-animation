@@ -55,6 +55,10 @@ export default function Home() {
             width:0,
             ease:"power2"
         })
+        .from("#fairview-button",{
+            opacity:0,
+            ease:"power2"
+        })
         tl.from("#name",{
             y:100,
             ease:"elastic",
@@ -75,9 +79,13 @@ export default function Home() {
                        <p>Building Android Applications with a Restful API and MySQL backend for managerial software. Also build Firebase hosted
                            react Applications for Covid Tracking in a Cloud Database. </p>
                         <div className="link-row">
-                            <Link to="projects" className="links-BTN">Views</Link>
-                            <a href="https://github.com/Joshimmor/job-logger-api"
-                            target="_Blank" rel="noreferrer" className="links-BTN"> github</a>
+                            <button id="fairview-button" >
+                                 <Link to="projects" >Views</Link>
+                            </button>
+                            <button id="fairview-button">
+                                <a href="https://github.com/Joshimmor/job-logger-api"
+                                 target="_Blank" rel="noreferrer" className="links-BTN">Github</a> 
+                            </button>
                         </div> 
                     </div>
                     <div className="Fairview-Catch">
