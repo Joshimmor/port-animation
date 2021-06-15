@@ -17,12 +17,7 @@ export default function Home() {
             start: "center center"
             } 
     });
-    const tl3 =  gsap.timeline({
-        scrollTrigger:{
-            trigger:".Past-div",
-            start:"bottom top"
-            } 
-    });
+    
     const tagLine = useRef(null);
     const Tag1 = useRef(null);
     const Tag2 = useRef(null);
@@ -50,10 +45,31 @@ export default function Home() {
         })
         .from(".Fairview-Textbox",{
             width:0,
+            opacity:0,
             ease:"power2"
+        })
+        .from("#tag5",{
+            opacity:0,
+            ease:"power2"   
+        })
+        .from("#tag6",{
+            opacity:0,
+            ease:"power2"
+        })
+        .from("#tag7",{
+            opacity:0,
+            ease:"power2"
+        })
+        .from("#tag8",{
+            opacity:0,
+            ease:"power2"
+        })
+        .from(".Past-Task",{
+            x:600
         })
         .from(".Past-Catch",{
             x:2000,
+            opacity:0,
             ease:"power2"
         })
         .from("#fade",{
@@ -67,7 +83,7 @@ export default function Home() {
         })
         
         
-    },[tl,tl2,tl3])
+    },[tl,tl2])
     return (
         <section className="Home-wrapper" >
             <div className="Landing-div" ref={tagLine}>
@@ -93,13 +109,21 @@ export default function Home() {
                         <h2 id="tag1" ref={Tag1}>Java Developer</h2>
                         <p id="tag2" ref={Tag2}>Building Scalable APIs</p>
                         <p id="tag3" ref={Tag3}>Android Applications</p>
-                        <p id="tag4" ref={Tag4}>Creating Business Lcogic</p>
+                        <p id="tag4" ref={Tag4}>Creating Business Logic</p>
                     </div>
             </div>
             <div className="Past-div">
+                <div className="task-row">
+                    <div className="Past-Task">
+                        <h2 id="tag5" ref={Tag1}>Framework7/Vue Developer</h2>
+                        <p id="tag6" ref={Tag2}>Building Views that Convert</p>
+                        <p id="tag7" ref={Tag3}>Designing User Personas</p>
+                        <p id="tag8" ref={Tag4}>Testing and Tracking</p>
+                    </div>
+                </div>
                     <div className="Past-Catch" ref={Pastcatch}>
                         <div className="Past-headline">
-                            <h1 id="fade">Shareity</h1>
+                            <h2 id="fade">Shareity</h2>
                             <p id="fade">Collaborated with Product Owners, Architects, Developers and other cross 
                                 functional teams to determine the optimum user interface design, 
                                 workflow and functionality</p>

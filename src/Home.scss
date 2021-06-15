@@ -63,14 +63,15 @@
 }
 .Fairview-div{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: flex-end;
     .Fairview-Textbox{
         border-radius: 5px;
         background-color: rgb(29, 28, 28);;
         height: 30vh;
-        width: 49vw;
+        width: 44vw;
+        margin-left: 5vw;
         h2,p{
             color: white;
         }
@@ -113,33 +114,9 @@
         }
     }
 }
-@media(max-width:600px){
-    
-    .vis{
-        ul{
-            padding: 0;
-        }
-    }
-    .Fairview-Textbox{
-        p{
-            display:none;
-        }
-        .link-row{
-            flex-direction: column;
-        }
-    }
-    .Past-Catch{
-        p{
-            display:none;
-        }
-        .link-row{
-            flex-direction: column;
-        }
-    }
-}
 .Past-div{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     //align-items: center;
@@ -154,10 +131,10 @@
         justify-content: flex-end;
         .Past-headline{
             width: 30%;
-            h1,p{
+            h2,p{
                 color: white;
             }
-            h1{
+            h2{
                 margin-bottom: 0;
             }
             p{
@@ -169,5 +146,61 @@
         background-color: #f8f8f8f8;
         height: 70vh;
         width:98vw ;
+    }
+}
+.task-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .Past-Task{
+        margin: 15vh;
+    }
+}
+@media(max-width:600px){
+    .task-row{
+        align-items: center;
+        .Past-Task{
+            margin: 20vh auto 20vh auto;
+        }
+    }
+    .Fairview-div{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .vis{
+        ul{
+            padding: 0;
+        }
+    }
+    .Fairview-Textbox{
+        width:98vw !important;
+        margin-left: auto;
+        margin-right: auto;
+        p{
+            display:none;
+        }
+        h2{
+            margin-bottom: 0!important;
+        }
+        .link-row{
+            flex-direction: column;
+        }
+    }
+    .Past-div{
+        align-items: center;
+    }
+    .Past-Catch{
+        height: 30vh !important;
+        justify-content: center !important;
+        p{
+            display:none;
+        }
+        .link-row{
+            flex-direction: column;
+        }
+        .Past-headline{
+            width: 100% !important;
+        }
     }
 }
