@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import {Link} from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FormspreeProvider } from '@formspree/react';
+import Form from "./Form";
 import "./Home.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -51,11 +53,10 @@ export default function Home() {
             ease:"power2"
         })
         .from(".Past-Catch",{
-            height:0,
-            width:0,
+            x:2000,
             ease:"power2"
         })
-        .from("#fairview-button",{
+        .from("#fade",{
             opacity:0,
             ease:"power2"
         })
@@ -75,14 +76,14 @@ export default function Home() {
             </div>
             <div className="Fairview-div">
                     <div className="Fairview-Textbox" ref={FairviewTextbox}>
-                       <h2>Fairview Healthcare Services</h2> 
-                       <p>Building Android Applications with a Restful API and MySQL backend for managerial software. Also build Firebase hosted
+                       <h2 id="fade">Fairview Healthcare Services</h2> 
+                       <p id="fade">Building Android Applications with a Restful API and MySQL backend for managerial software. Also built Firebase hosted
                            react Applications for Covid Tracking in a Cloud Database. </p>
                         <div className="link-row">
-                            <button id="fairview-button" >
+                            <button id="fade" >
                                  <Link to="projects" >Views</Link>
                             </button>
-                            <button id="fairview-button">
+                            <button id="fade">
                                 <a href="https://github.com/Joshimmor/job-logger-api"
                                  target="_Blank" rel="noreferrer" className="links-BTN">Github</a> 
                             </button>
@@ -92,15 +93,31 @@ export default function Home() {
                         <h2 id="tag1" ref={Tag1}>Java Developer</h2>
                         <p id="tag2" ref={Tag2}>Building Scalable APIs</p>
                         <p id="tag3" ref={Tag3}>Android Applications</p>
-                        <p id="tag4" ref={Tag4}>Creating business logic to problems</p>
+                        <p id="tag4" ref={Tag4}>Creating Business Lcogic</p>
                     </div>
             </div>
             <div className="Past-div">
                     <div className="Past-Catch" ref={Pastcatch}>
-                        <h2>Java Developer</h2>
-                        <p>here goes something else</p>
+                        <div className="Past-headline">
+                            <h1 id="fade">Shareity</h1>
+                            <p id="fade">Collaborated with Product Owners, Architects, Developers and other cross 
+                                functional teams to determine the optimum user interface design, 
+                                workflow and functionality</p>
+                            <div className="link-row">
+                                    <button id="fade" >
+                                        <Link to="projects" >Views</Link>
+                                    </button>
+                                    <button id="fade">
+                                        <a href="https://shareity.com/"
+                                        target="_Blank" rel="noreferrer" className="links-BTN">Shareity</a> 
+                                    </button>
+                            </div> 
+                        </div>
                     </div>
                     <div className="Past-text">
+                        <FormspreeProvider project="1592168122427637470">
+                             <Form />
+                        </FormspreeProvider>
                     </div>
             </div>
          </section>
