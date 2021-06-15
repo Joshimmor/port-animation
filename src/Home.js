@@ -14,7 +14,7 @@ export default function Home() {
     const tl2 =  gsap.timeline({
         scrollTrigger:{
             trigger:".Fairview-div",
-            start: "center center"
+            start: "top bottom"
             } 
     });
     
