@@ -15,6 +15,7 @@
         margin: 0 10px 0 0;
         padding:0;
         font-size: 4em;
+        color: rgb(29, 28, 28);
     }
     .button {
             backface-visibility: hidden;
@@ -62,18 +63,20 @@
 }
 .Fairview-div{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: flex-end;
     .Fairview-Textbox{
-        background-color: #000;
+        border-radius: 5px;
+        background-color: rgb(29, 28, 28);;
         height: 30vh;
-        width: 49vw;
+        width: 44vw;
+        margin-left: 5vw;
         h2,p{
             color: white;
         }
         p{
-            margin: 10px 5vw 0 5vw;
+            margin: 10px 7.5vw 0 5vw;
         }
     }
     .Fairview-Catch{
@@ -82,60 +85,122 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    } 
+}
+.link-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button{
+        background: rgb(29, 28, 28);;
+        border-radius: 5px;
+        border: 1px solid rgb(255, 255, 255);
+        padding: 10px 15px 10px 15px;
+        margin: 5px;
+        box-shadow: 0px 0px 4px rgba(0,0,0,0.5),0px 0px 1px 5px rgba(0,0,0,0.1);
+            color: rgb(29, 28, 28);;
+        text-shadow: 0px 0px 30px rgba(0,0,0,0.7),0px 1px 1px rgba(0,0,0,0.4);
+        transition: all .25s ease-in-out;
+        a{
+            text-decoration: none;
+            color: white;
+        }
     }
-    .link-row{
+    button:hover{
+        background-color: white;
+        transform: translateY(-2px);
+        a{
+            color: rgb(29, 28, 28);;
+        }
+    }
+}
+.Past-div{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    .Past-Catch{
+        margin-top: 5px;
+        border-radius: 5px;
+        background-color: rgb(29, 28, 28);
+        height: 30vh;
+        width: 98vw;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        button{
-            background: black;
-            border-radius: 5px;
-            border: 1px solid rgb(255, 255, 255);
-            padding: 10px 15px 10px 15px;
-            margin: 5px;
-            box-shadow: 0px 0px 4px rgba(0,0,0,0.5),0px 0px 1px 5px rgba(0,0,0,0.1);
-                color: #000;
-            text-shadow: 0px 0px 30px rgba(0,0,0,0.7),0px 1px 1px rgba(0,0,0,0.4);
-            transition: all .25s ease-in-out;
-            a{
-                text-decoration: none;
+        justify-content: flex-end;
+        .Past-headline{
+            width: 30%;
+            h2,p{
                 color: white;
             }
-        }
-        button:hover{
-            background-color: white;
-            transform: translateY(-2px);
-            a{
-                color: black;
+            h2{
+                margin-bottom: 0;
+            }
+            p{
+                margin-bottom: 0;
             }
         }
     }
-    
+    .Past-text{
+        background-color: #f8f8f8f8;
+        height: 70vh;
+        width:98vw ;
+    }
+}
+.task-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .Past-Task{
+        margin: 15vh;
+    }
 }
 @media(max-width:600px){
+    .task-row{
+        align-items: center;
+        .Past-Task{
+            margin: 20vh auto 20vh auto;
+        }
+    }
+    .Fairview-div{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .vis{
+        ul{
+            padding: 0;
+        }
+    }
     .Fairview-Textbox{
+        width:98vw !important;
+        margin-left: auto;
+        margin-right: auto;
+        p{
+            display:none;
+        }
+        h2{
+            margin-bottom: 0!important;
+        }
+        .link-row{
+            flex-direction: column;
+        }
+    }
+    .Past-div{
+        align-items: center;
+    }
+    .Past-Catch{
+        height: 30vh !important;
+        justify-content: center !important;
         p{
             display:none;
         }
         .link-row{
             flex-direction: column;
         }
-    }
-}
-.Past-div{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    //align-items: center;
-    .Past-Catch{
-        background-color: #000;
-        height: 30vh;
-        width: 98vw;
-    }
-    .Past-text{
-        background-color: #f8f8f8f8;
-        height: 70vh;
-        width:98vw ;
+        .Past-headline{
+            width: 100% !important;
+        }
     }
 }
