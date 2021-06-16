@@ -1,0 +1,38 @@
+.Landing-Col{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: flex-end;
+    background-image: linear-gradient(to bottom right,rgb(41, 25, 25),black);
+}
+.headline{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    line-height: .95;
+    h1{
+        font-size: 4rem;
+        color:white;
+        margin-right: 2vw;
+    }
+}
+.Links{
+    ul{
+        text-align: right;
+        li{
+           list-style-type: none;
+            color: #9d000000;
+            margin-right: 2vw;
+            font-size: 3rem;
+            font-weight: 900;
+            -webkit-text-stroke: 1px #9d0000;
+            transition: all .25s ease-in-out;
+            cursor: pointer;
+        }
+        li:hover{
+            transform: translateY(-2px);
+        }
+    }
+}
