@@ -1,10 +1,14 @@
+$c:#fcedd4;
+$b:#1a281f;
+$r:#cc0000;
 .Landing-Col{
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     justify-content: flex-end;
-    background-image: linear-gradient(to bottom right,rgb(41, 25, 25),black);
+    background-image: linear-gradient(to bottom right,$b,#000000,);
+    background-color: $b;
 }
 .headline{
     display: flex;
@@ -14,25 +18,47 @@
     line-height: .95;
     h1{
         font-size: 4rem;
-        color:white;
-        margin-right: 2vw;
+        color:$c;
+        margin-right: 5vw;
+        margin-bottom: 2vh;
     }
 }
 .Links{
+    .line{
+        margin-right: 0;
+        margin-left: auto;
+        color:$r;
+        width: 70vw;
+        height: 3px;
+        display: block;
+        border-top: 2px solid $r;
+    }
     ul{
+        margin-top: 0;
         text-align: right;
         li{
            list-style-type: none;
-            color: #9d000000;
-            margin-right: 2vw;
-            font-size: 3rem;
-            font-weight: 900;
-            -webkit-text-stroke: 1px #9d0000;
+            color:$r;
+            margin-right: 5vw;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: .2em;
+            line-height: 1.75;
+           /* -webkit-text-stroke: 1px $r;*/
             transition: all .25s ease-in-out;
             cursor: pointer;
         }
         li:hover{
-            transform: translateY(-2px);
+            transform: translateX(-2px);
+            color: #e00000;
         }
+    }
+}
+.Navi{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    svg{
+        margin-left: 3vw;
     }
 }
