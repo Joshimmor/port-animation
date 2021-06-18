@@ -4,6 +4,7 @@ import "../Glitch.scss";
 import {TimelineLite} from "gsap";
 
 export default function LandingMobile() {
+    let LinkClassName = "";
     const Tag1 = useRef(null);
     const line = useRef(null);
     const tl = new TimelineLite();
@@ -29,6 +30,7 @@ export default function LandingMobile() {
             ease:"power2"
         })
     },[tl])
+
     return (
         <div className="Landing-Col">
             <div className="headline">
@@ -38,7 +40,10 @@ Joshua Immordino">Joshua Immordino</h1>
             <div className="Links">
                 <span className="line"></span>
                 <ul>
-                    <li id="tag1">PROJECTS</li>
+                    <li onMouseOver={()=> LinkClassName += "glitch"}  
+                    data-text="PROJECTS"
+                    id="tag1"
+                    className={LinkClassName}>PROJECTS</li>
                     <li id="tag2">CONTACT</li>
                     <li id="tag3">GITHUB</li>
                 </ul>
