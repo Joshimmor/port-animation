@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import LandingDesktop from './LandingDesktop';
 import LandingMobile from './LandingMobile';
 
 export default class Landing extends Component {
@@ -8,7 +7,7 @@ export default class Landing extends Component {
         console.log(windowWidth)
         if(windowWidth > 600){
             return(
-                <LandingDesktop/>
+                <LandingMobile/>
             )
         }else{
             return(
