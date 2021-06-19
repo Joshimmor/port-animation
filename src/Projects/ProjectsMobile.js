@@ -5,8 +5,8 @@ import {TimelineLite} from "gsap";
 import {Link} from "react-router-dom";
 
 export default function LandingMobile() {
-    const tl = new TimelineLite();
     useEffect(()=>{
+        const tl = new TimelineLite();
         tl.from(".line",{
             x:-1000,
             ease:"power2"
@@ -27,7 +27,7 @@ export default function LandingMobile() {
             opacity:0,
             ease:"power2"
         })
-    },[tl])
+    },[])
 
     return (
         <div className="Landing-colPM">
