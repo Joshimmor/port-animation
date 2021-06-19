@@ -2,6 +2,7 @@
   "name": "port-scroller",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@formspree/cli": "^0.9.6",
     "@formspree/react": "^2.2.3",
