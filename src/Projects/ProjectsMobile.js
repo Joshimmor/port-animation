@@ -1,12 +1,10 @@
-import React,{useRef, useState, useEffect} from 'react';
+import React,{useEffect} from 'react';
 import "./ProjectMobile.scss";
 import "../Glitch.scss";
 import {TimelineLite} from "gsap";
 import {Link} from "react-router-dom";
 
 export default function LandingMobile() {
-    const Tag1 = useRef(null);
-    const line = useRef(null);
     const tl = new TimelineLite();
     useEffect(()=>{
         tl.from(".line",{

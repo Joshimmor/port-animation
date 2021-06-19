@@ -1,7 +1,5 @@
 import './App.scss';
-import Home from "./Home.js";
 import Landing from './Landing/Landing';
-import Nav from "./Nav.js";
 import Projects from "./Projects/Projects"
 import {
   BrowserRouter as Router,
