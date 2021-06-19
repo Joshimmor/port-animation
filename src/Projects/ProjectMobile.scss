@@ -1,32 +1,32 @@
 $c:#fcedd4;
 $b:#1a281f;
 $r:#cc0000;
-.Landing-Col{
+.Landing-colPM{
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    justify-content: flex-end;
+    justify-content: flex-start;
     background-image: linear-gradient(to bottom right,$b,#000000,);
     background-color: $b;
 }
-.headline{
+.headlinePM{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     text-align: right;
     line-height: .95;
     h1{
         font-size: 4rem;
         color:$c;
-        margin-right: 5vw;
+        margin-left: 5vw;
         margin-bottom: 2vh;
     }
 }
-.Links{
+.LinksPM{
     .line{
-        margin-right: 0;
-        margin-left: auto;
+        margin-right: auto;
+        margin-left: 0;
         color:$r;
         width: 70vw;
         height: 3px;
@@ -34,13 +34,14 @@ $r:#cc0000;
         border-top: 2px solid $r;
     }
     ul{
+        padding-inline-start:0;
         margin-top: 0;
-        text-align: right;
+        text-align: left;
         li{
             list-style-type: none;
             a{
                 color:$r;
-                margin-right: 5vw;
+                margin-left: 5vw;
                 font-size: 1.3rem;
                 font-weight: 600;
                 letter-spacing: .2em;
@@ -52,16 +53,15 @@ $r:#cc0000;
             }
         }
         li:hover{
-            transform: translateX(-2px);
+            transform: translateX(2px);
             color: #e00000;
         }
     }
 }
-.Navi{
+.NaviPM{
+    justify-self: flex-end;
+    margin-left: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    svg{
-        margin-left: 3vw;
-    }
+    justify-content: center;
 }

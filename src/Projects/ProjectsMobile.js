@@ -1,5 +1,5 @@
 import React,{useRef, useState, useEffect} from 'react';
-import "./LandingMobile.scss";
+import "./ProjectMobile.scss";
 import "../Glitch.scss";
 import {TimelineLite} from "gsap";
 import {Link} from "react-router-dom";
@@ -10,11 +10,11 @@ export default function LandingMobile() {
     const tl = new TimelineLite();
     useEffect(()=>{
         tl.from(".line",{
-            x:1000,
+            x:-1000,
             ease:"power2"
         })
         .from("#ball",{
-            y:1000,
+            x:1000,
             ease:"power2"
         },"-=.5")
         .from("#tag1",{
@@ -32,32 +32,34 @@ export default function LandingMobile() {
     },[tl])
 
     return (
-        <div className="Landing-Col">
-            <div className="headline">
+        <div className="Landing-colPM">
+            <div className="headlinePM">
                 <h1 className="glitch" data-text="
-Joshua Immordino">Joshua Immordino</h1>
+Projects">Projects</h1>
+            <div className="NaviPM">
+                    <Link to="/">
+                        <svg id="ball" width='60' height='60'>
+                            <circle cx='20' cy='20' r='20'  fill='#cc0000' />
+                        </svg>
+                    </Link>
             </div>
-            <div className="Links">
+            </div>
+            <div className="LinksPM">
                 <span className="line"></span>
                 <ul>
                     <li id="tag1">
                         <Link 
-                        to="/projects">PROJECTS</Link>
+                        to="/projects">FAIRVIEW</Link>
                     </li>
                     <li id="tag2">
                     <Link 
-                        to="/contact">CONTACT</Link>
+                        to="/contact">SHAREITY</Link>
                     </li>
                     <li id="tag3">
                     <a   rel="noreferrer" target="_blank"
-                     href="https://github.com/Joshimmor">GITHUB</a>
+                     href="https://github.com/Joshimmor">RESEARCH</a>
                     </li>
                 </ul>
-            </div>
-            <div className="Navi">
-                     <svg id="ball" width='60' height='60'>
-                         <circle cx='20' cy='20' r='20'  fill='#cc0000' />
-                    </svg>
             </div>
         </div>
     )
