@@ -1,9 +1,9 @@
 import React,{useEffect} from 'react';
 import "./LandingMobile.scss";
 import "../Glitch.scss";
-import {TimelineLite} from "gsap";
+import gsap, {TimelineLite} from "gsap";
 import {Link} from "react-router-dom";
-
+gsap.registerPlugin(TimelineLite);
 export default function LandingMobile() {
     useEffect(()=>{
         const tl = new TimelineLite();
