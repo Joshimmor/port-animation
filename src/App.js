@@ -2,7 +2,7 @@ import './App.scss';
 import Landing from './Landing/Landing';
 import Projects from "./Projects/Projects"
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
