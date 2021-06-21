@@ -47,15 +47,15 @@ Projects">Projects</h1>
                 <ul>
                     <li id="tag1">
                         <Link 
-                        to="/projects">FAIRVIEW</Link>
+                        to="/fairview">FAIRVIEW</Link>
                     </li>
                     <li id="tag2">
                     <Link 
-                        to="/contact">SHAREITY</Link>
+                        to="/">SHAREITY</Link>
                     </li>
                     <li id="tag3">
-                    <a   rel="noreferrer" target="_blank"
-                     href="https://github.com/Joshimmor">RESEARCH</a>
+                    <Link 
+                        to="/">RESEARCH</Link>
                     </li>
                 </ul>
             </div>

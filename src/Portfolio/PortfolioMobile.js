@@ -28,14 +28,14 @@ export default function PortfolioMobile() {
     FAIRVIEW">FAIRVIEW</h1>  
                     <div className="NaviPort">
                             <Link to="/">
-                            <svg id="ball" width='60' height='60'>
+                            <svg tyle={{zIndex:"2"}} id="ball" width='60' height='60'>
                                 <circle cx='20' cy='20' r='20'  fill='#cc0000' />
                             </svg>
                         </Link>
                     </div>
                  </div>
                 <div className="LinksPort">
-                    <span className="line"></span>
+                    <span style={{zIndex:"2"}} className="line"></span>
                 </div>
                 <div className="FairviewVideo">
                     <video  autoPlay loop muted >
