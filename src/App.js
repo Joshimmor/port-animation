@@ -1,6 +1,7 @@
 import './App.scss';
 import Landing from './Landing/Landing';
-import Projects from "./Projects/Projects"
+import Projects from "./Projects/Projects";
+import Portfolio from "./Portfolio/Portfolio"
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +15,9 @@ function App() {
       <Switch>  
       <Route path="/projects">
              <Projects/>
+        </Route>
+        <Route path="/fairview">
+             <Portfolio/>
         </Route>
         <Route  exact path="/">
              <Landing/>

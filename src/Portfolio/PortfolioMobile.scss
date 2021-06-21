@@ -1,0 +1,59 @@
+$c:#fcedd4;
+$b:#1a281f;
+$r:#cc0000;
+.Landing-ColPort{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: flex-start;
+   /* background-image: linear-gradient(to bottom right,$b,#000000,);
+    background-color: $b;*/
+}
+.headlinePort{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: right;
+    line-height: .95;
+    h1{
+        font-size: 4rem;
+        color:$c;
+        margin-left: 5vw;
+        margin-bottom: 2vh;
+    }
+}
+.LinksPort{
+    .line{
+        margin-right: auto;
+        margin-left: 0;
+        color:$r;
+        width: 70vw;
+        height: 3px;
+        display: block;
+        border-top: 2px solid $r;
+    }
+   
+}
+.NaviPort{
+    justify-self: flex-end;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.FairviewVideo{
+    position: absolute; 
+    top: 0; 
+    left:0;
+    width:100vw;
+    height:  100vh; 
+    z-index: -1;
+    video{
+        height: inherit;
+        width: inherit;
+        source{
+            height:100vh
+        }
+    }
+}
