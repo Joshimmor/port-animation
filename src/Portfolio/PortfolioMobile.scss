@@ -7,8 +7,9 @@ $r:#cc0000;
     height: 100vh;
     width: 100vw;
     justify-content: flex-start;
-   /* background-image: linear-gradient(to bottom right,$b,#000000,);
-    background-color: $b;*/
+   background-image: linear-gradient(to bottom ,$b,#000000,);
+    background-color: $b;
+    z-index: -1;
 }
 .headlinePort{
     display: flex;
@@ -21,6 +22,7 @@ $r:#cc0000;
         color:$c;
         margin-left: 5vw;
         margin-bottom: 2vh;
+        z-index: 1;
     }
 }
 .LinksPort{
@@ -32,6 +34,7 @@ $r:#cc0000;
         height: 3px;
         display: block;
         border-top: 2px solid $r;
+        z-index: 2;
     }
    
 }
@@ -41,6 +44,7 @@ $r:#cc0000;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 2;
 }
 .FairviewVideo{
     position: absolute; 
@@ -48,7 +52,7 @@ $r:#cc0000;
     left:0;
     width:100vw;
     height:  100vh; 
-    z-index: -1;
+    z-index: 0;
     video{
         height: inherit;
         width: inherit;
