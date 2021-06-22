@@ -1,12 +1,14 @@
 import './App.scss';
 import Landing from './Landing/Landing';
 import Projects from "./Projects/Projects";
-import Portfolio from "./Portfolio/Portfolio"
+import Portfolio from "./Portfolio/Portfolio";
+import Playground from './3D Rendering/Playground';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
         </Route>
         <Route path="/fairview">
              <Portfolio/>
+        </Route>
+        <Route path="/test">
+             <Playground/>
         </Route>
         <Route  exact path="/">
              <Landing/>
