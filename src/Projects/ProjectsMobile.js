@@ -55,7 +55,7 @@ Projects">Projects</h1>
                     </li>
                     <li id="tag3">
                     <Link 
-                        to="/">RESEARCH</Link>
+                        to="/test">RESEARCH</Link>
                     </li>
                 </ul>
             </div>
