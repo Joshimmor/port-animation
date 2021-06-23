@@ -18,17 +18,26 @@ export default function PortfolioMobile() {
             y:1000,
             ease:"power2"
         },"-=.5")
+        .from(".port-buttons",{
+            opacity:0,
+            ease:"power2"
+        })
         
     },[])
 
     return (
         <div className="Landing-ColPort">
+                 <div className="FairviewVideo">
+                    <video  autoPlay loop muted playsinline >
+                        <source src={FairviewVid} type="video/mp4"></source>
+                    </video>
+                </div>
                 <div className="headlinePort">
                     <h1 className="glitch" data-text="
-    FAIRVIEW">FAIRVIEW</h1>  
+        FAIRVIEW">FAIRVIEW</h1>  
                     <div className="NaviPort">
-                            <Link to="/">
-                            <svg tyle={{zIndex:"2"}} id="ball" width='60' height='60'>
+                        <Link style={{zIndex:"2"}} to="/">
+                            <svg  id="ball" width='60' height='60'>
                                 <circle cx='20' cy='20' r='20'  fill='#cc0000' />
                             </svg>
                         </Link>
@@ -37,10 +46,12 @@ export default function PortfolioMobile() {
                 <div className="LinksPort">
                     <span style={{zIndex:"2"}} className="line"></span>
                 </div>
-                <div className="FairviewVideo">
-                    <video  autoPlay loop muted >
-                        <source src={FairviewVid} type="video/mp4"></source>
-                    </video>
+                <div className="action-row">
+                        <Link className="port-buttons" to="/">
+                            HOME
+                        </Link>
+                        <a  className="port-buttons" rel="noreferrer" target="_blank"
+                     href="https://github.com/Joshimmor/job-logger-api">GITHUB</a>
                 </div>
             </div>
     )

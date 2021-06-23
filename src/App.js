@@ -2,6 +2,7 @@ import './App.scss';
 import Landing from './Landing/Landing';
 import Projects from "./Projects/Projects";
 import Portfolio from "./Portfolio/Portfolio";
+import Shareity from "./Portfolio/Shareity";
 import Playground from './3D Rendering/Playground';
 import {
   BrowserRouter as Router,
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/fairview">
              <Portfolio/>
+        </Route>
+        <Route path="/shareity">
+             <Shareity/>
         </Route>
         <Route path="/test">
              <Playground/>

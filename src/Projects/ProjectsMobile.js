@@ -24,7 +24,7 @@ export default function LandingMobile() {
             ease:"power2"
         })
         .from("#tag3",{
-            opacity:0,
+            opacity:0,      
             ease:"power2"
         })
     },[])
@@ -33,7 +33,7 @@ export default function LandingMobile() {
         <div className="Landing-colPM">
             <div className="headlinePM">
                 <h1 className="glitch" data-text="
-Projects">Projects</h1>
+            Projects">Projects</h1>
             <div className="NaviPM">
                     <Link to="/">
                         <svg id="ball" width='60' height='60'>
@@ -51,7 +51,7 @@ Projects">Projects</h1>
                     </li>
                     <li id="tag2">
                     <Link 
-                        to="/">SHAREITY</Link>
+                        to="/shareity">SHAREITY</Link>
                     </li>
                     <li id="tag3">
                     <Link 

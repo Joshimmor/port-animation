@@ -33,7 +33,7 @@ export default function LandingMobile() {
         <div className="Landing-Col">
             <div className="headline">
                 <h1 className="glitch" data-text="
-Joshua Immordino">Joshua Immordino</h1>
+                Joshua Immordino">Joshua Immordino</h1>
             </div>
             <div className="Links">
                 <span className="line"></span>
