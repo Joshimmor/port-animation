@@ -1,6 +1,6 @@
-import React, { Suspense,useRef, useState} from 'react'
+import React, { Suspense,useRef} from 'react'
 import { OrbitControls} from '@react-three/drei';
-import { Canvas, useThree,useFrame} from '@react-three/fiber';
+import { Canvas, useThree} from '@react-three/fiber';
 import Ball from "./Ball";
 
 const Controls = () => {
