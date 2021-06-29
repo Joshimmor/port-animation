@@ -8,39 +8,41 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/Premier Ball.glb')
+
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh
         geometry={nodes.mesh_id36.geometry}
         material={materials['74']}
         position={[-0.01, 0.02, 0.21]}
-        scale={[1, 1, 1]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={[.25, .25, .5]}
       />
       <mesh
         geometry={nodes.mesh_id48.geometry}
         material={materials['76']}
         position={[-0.01, 0.01, 0.38]}
         rotation={[Math.PI / 2, 0, 0]}
-        scale={[1, 1, 1]}
+        scale={[.25, .25, .5]}
       />
       <mesh
         geometry={nodes.mesh_id38.geometry}
         material={materials['78']}
         position={[-0.01, 0.01, 0.4]}
         rotation={[Math.PI / 2, 0, 0]}
-        scale={[1, 1, 1]}
+        scale={[.25, .25, .5]}
       />
       <mesh
         geometry={nodes.mesh_id44.geometry}
         material={materials['80']}
         position={[-0.01, 0.01, 0.41]}
-        rotation={[Math.PI / 2, 0, 0]}
+        rotation={[Math.PI / 2, 90, 0]}
         scale={[1, 1, 1]}
       />
-      <mesh geometry={nodes.mesh_id31.geometry} material={materials['82']} position={[-0.01, 50.13, 0.21]} scale={1} />
+      <mesh geometry={nodes.mesh_id31.geometry} material={materials['74']} position={[-0.01, 50.13, 0.21]} scale={1} />
       <mesh
         geometry={nodes.mesh_id33.geometry}
-        material={materials['84']}
+        material={materials['81']}
         position={[-0.01, -50.13, 0.21]}
         rotation={[-Math.PI, 0, 0]}
         scale={1}

@@ -1,13 +1,13 @@
-import React, { Suspense,useRef} from 'react'
+import React, { Suspense, useRef} from 'react'
 import { OrbitControls} from '@react-three/drei';
 import { Canvas, useThree} from '@react-three/fiber';
-import Ball from "./Ball";
+import Rocket from "./Rocket";
 
 const Controls = () => {
     const orbitRef = useRef();
     const {camera, gl} = useThree();
 
-    camera.position.z = 500;
+   
     return (
         <OrbitControls
             args={[camera, gl.domElement]}
@@ -18,25 +18,29 @@ const Controls = () => {
 
 
 
+
 export default function TestRender() {
     return (
         <Canvas className="Canvas-Element">
             <Controls />
-            <ambientLight  intensity={1.5}/>
-            <pointLight  color="white" intensity={1} position={[100, 100, 100]} />
+            <ambientLight intensity={2}/>
+            <pointLight  color="0xFFFFFF" intensity={1} position={[0, 0, -500]}  />
             <rectAreaLight
-              width={30}
-              height={30}
-              intensity={10}
-              color="white"
-              position={[50, 50, 5]}
+              width={500}
+              height={500}
+              intensity={1}
+              color="0xFFFFFF"
+              position={[0, 0, -100]}
               lookAt={[0, 0, 0]}
               penumbra={2}
               castShadow
               />
-            <spotLight position={[1000, 1000, 1000]} />
+            <spotLight
+             position={[0, 0, -500]} />
             <Suspense fallback={null}>
-                <Ball scale={.5} position={[0, 0, 0]}/>
+                <Rocket position={[0,-2,-5]}
+                rotation={[0, Math.PI / 2, 0]}
+                />
             </Suspense>
         </Canvas>
     )
